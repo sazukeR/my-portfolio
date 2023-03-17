@@ -70,8 +70,6 @@ header figure {
 
 .panel {
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
   background-color: var(--color-modal);
   position: fixed;
   z-index: 998;
@@ -83,6 +81,22 @@ header figure {
   transform: translate(0, -100%);
 }
 
+.panel ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  list-style: none;
+  padding: inherit;
+  margin: 0;
+}
+
+.panel li {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
 .panel.is-active {
   transform: translate(0, 0);
 }
@@ -92,7 +106,6 @@ header figure {
   justify-content: center;
   flex-grow: 1;
   align-items: center;
-  width: inherit;
   font: var(--font-header-nav);
   font-weight: 300;
   color: white;
@@ -272,16 +285,19 @@ header figure {
   color: white;
 }
 
-div.social {
+ul.social {
+  display: flex;
+  flex-direction: row;
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  list-style: none;
 }
 
-.front-page div.social {
+.front-page ul.social {
   display: none;
 }
 
-.social a i {
+.social li a i {
   padding: 0 1rem 1rem 1rem;
   transition: all 0.3s ease;
 }
