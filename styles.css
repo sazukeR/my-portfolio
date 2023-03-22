@@ -18,7 +18,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  user-select: none;
   font-family: var(--font);
   scroll-behavior: smooth;
 }
@@ -318,7 +317,7 @@ i.fa-linkedin {
   color: #0077b5;
 }
 
-i.fa-linkedin:hover {
+a i.fa-linkedin:hover {
   color: black;
 }
 
@@ -330,7 +329,7 @@ i.fa-github {
   color: black;
 }
 
-i.fa-github:hover {
+a i.fa-github:hover {
   color: #6cc644;
 }
 
