@@ -18,7 +18,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  user-select: none;
   font-family: var(--font);
   scroll-behavior: smooth;
 }
@@ -318,7 +317,7 @@ i.fa-linkedin {
   color: #0077b5;
 }
 
-i.fa-linkedin:hover {
+a i.fa-linkedin:hover {
   color: black;
 }
 
@@ -330,10 +329,254 @@ i.fa-github {
   color: black;
 }
 
-i.fa-github:hover {
+a i.fa-github:hover {
   color: #6cc644;
 }
 
 a i.fa-github:active {
   color: #c9510c;
+}
+
+/* -----   ABOUT ME   ------ */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 4rem;
+}
+
+.info-btn {
+  display: inline;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  color: var(--color-primary);
+  font: var(--font-p);
+  cursor: pointer;
+}
+
+.info-btn-inactive {
+  display: none;
+}
+
+.more-info {
+  display: none;
+}
+
+.show-info {
+  display: block;
+}
+
+ul.tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+}
+
+li.tool-icon {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+ul.tools li.tool-icon i {
+  font-size: 3rem;
+}
+
+li.tool-icon i.fa-square-js {
+  color: #f7df1e;
+  background-color: black;
+}
+
+li.tool-icon i.fa-react {
+  color: #00d8ff;
+}
+
+li.tool-icon i.fa-node-js {
+  color: #6cc24a;
+}
+
+li.tool-icon i.fa-github {
+  color: #6e5494;
+}
+
+li.tool-icon i.fa-figma {
+  color: #f47721;
+}
+
+.platforms .container-platforms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.platforms .container-platforms span {
+  margin-left: 0.3rem;
+  margin-top: 0.2rem;
+  font: var(--font-references);
+  color: #2d2d2e;
+}
+
+.platforms .container-platforms li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  align-items: flex-start;
+  min-width: 28%;
+  margin-bottom: 3rem;
+}
+
+.fa-envelope {
+  color: #b60202;
+  background-color: #e7e7e7;
+  font-size: 2rem;
+}
+
+.fa-twitter {
+  color: #1da1f2;
+  font-size: 2rem;
+}
+
+.fa-github {
+  color: #6e5494;
+  font-size: 2rem;
+}
+
+.fa-linkedin {
+  color: #0077b5;
+  font-size: 2rem;
+}
+
+.fa-codepen {
+  color: #47cf73;
+  font-size: 2rem;
+}
+
+/* -----   WORKS   ------ */
+
+.projects {
+  align-items: center;
+}
+
+.projects h3 {
+  align-self: flex-start;
+  width: 100%;
+}
+
+.container-projects {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(230px, 1fr));
+  max-width: 97%;
+  margin-top: 3rem;
+  gap: 4rem 2rem;
+}
+
+.container-projects a:hover {
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
+
+.container-projects figure {
+  display: flex;
+  margin: 0;
+}
+
+.container-projects figure img {
+  border-radius: 1rem;
+  width: 50%;
+}
+
+.container-projects figure p {
+  line-height: 1.2;
+  font-size: 1rem;
+  width: 50%;
+  text-align: left;
+  align-self: center;
+  margin-left: 0.5rem;
+  font-weight: 700;
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-modal);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: -2.2rem;
+  right: 1rem;
+}
+
+div.modal-content a.modal-close i {
+  font-size: 2rem;
+  color: white;
+}
+
+.modal[id|="code"]:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.portfolio-modal {
+  background-color: white;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+article.portfolio-modal img {
+  height: 50vh;
+  min-height: 300px;
+  max-height: 500px;
+}
+
+article.portfolio-modal h4 {
+  border-bottom: medium solid var(--color-primary);
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+}
+
+article.portfolio-modal p {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.portfolio-details {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-auto-rows: 2rem;
+}
+
+.portfolio-details b {
+  color: var(--color-primary);
 }
