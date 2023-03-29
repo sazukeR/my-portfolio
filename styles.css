@@ -10,6 +10,8 @@
   --color-secundary: #c1e0eb;
   --color-terciary: #eef3f6;
   --color-modal: rgba(34, 34, 34, 0.65);
+  --color-ok: rgba(68, 143, 68, 0.856);
+  --color-error: rgba(194, 24, 24, 0.849);
 }
 
 html,
@@ -61,6 +63,10 @@ a {
   text-decoration: none;
   text-align: center;
   transition: all 0.2s ease;
+}
+
+ul {
+  padding: 0;
 }
 
 header figure {
@@ -579,4 +585,123 @@ article.portfolio-modal p {
 
 .portfolio-details b {
   color: var(--color-primary);
+}
+
+/* -----   FORM   ------ */
+
+.container-form {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 0.2rem;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.form div label {
+  margin: 0 0 0.5rem 1rem;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  display: flex;
+  background-color: transparent;
+  width: 90%;
+  border: 1px solid #b3a7a7;
+  border-radius: 0.5rem;
+  padding: 0.8rem 0.8rem;
+  font-family: "consolas", sans-serif;
+}
+
+.form div > *::placeholder {
+  color: #555;
+}
+
+.form [required]:valid {
+  border: thin solid var(--color-ok);
+}
+
+.form [required]:invalid {
+  border: thin solid var(--color-error);
+}
+
+.form-error {
+  color: var(--color-error);
+  transition: all 800ms ease;
+  width: 100%;
+  justify-content: center;
+  padding-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.form textarea {
+  height: 5rem;
+  resize: none;
+}
+
+.form input[type="submit"] {
+  margin: auto;
+  margin-top: 1rem;
+  background-color: var(--color-secundary);
+  border: 1px solid var(--color-primary);
+  border-radius: 30px;
+  font-weight: bold;
+  color: var(--color-primary);
+  width: 50%;
+  max-width: 150px;
+  padding: 0.6rem 0.1rem;
+  cursor: pointer;
+}
+
+.form input[type="submit"]:hover {
+  color: white;
+  background-color: var(--color-primary);
+  border-color: var(--color-secundary);
+}
+
+.form input[type="submit"]:active {
+  color: var(--color-primary);
+  background-color: var(--color-secundary);
+  border-color: var(--color-primary);
+}
+
+.form-error.is-act {
+  display: flex;
+  animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.social-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  padding: 1rem;
+  background-color: var(--color-terciary);
+}
+
+section.social-footer .social {
+  margin: 0;
+}
+
+section.social-footer .social a i {
+  padding: 0 1rem;
 }
