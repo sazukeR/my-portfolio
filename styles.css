@@ -12,6 +12,7 @@
   --color-modal: rgba(34, 34, 34, 0.65);
   --color-ok: rgba(68, 143, 68, 0.856);
   --color-error: rgba(194, 24, 24, 0.849);
+  --bg-body: #fffdf2;
 }
 
 html,
@@ -22,6 +23,7 @@ body {
   box-sizing: border-box;
   font-family: var(--font);
   scroll-behavior: smooth;
+  background-color: var(--bg-body);
 }
 
 header {
@@ -42,7 +44,7 @@ h3 {
   font: var(--font-subtitle);
   text-shadow: 1px 1px 2px #555;
   margin: 0 0 1rem 0;
-  border-bottom: 0.1rem solid rgb(218, 215, 215);
+  border-bottom: 0.1rem solid #bbb;
   color: #2d2d2e;
   font-weight: bold;
 }
@@ -67,6 +69,10 @@ a {
 
 ul {
   padding: 0;
+}
+
+.pages-body {
+  background-color: #fff;
 }
 
 header figure {
@@ -211,11 +217,7 @@ header figure {
 .hello-card {
   background-color: var(--color-terciary);
   width: 100%;
-  height: 30vh;
-}
-
-.hello-card-avatar {
-  border: 1px solid black;
+  height: 15vh;
 }
 
 .hello-card-container {
@@ -242,6 +244,8 @@ header figure {
   text-align: center;
   margin: 0;
   font-size: 1.3rem;
+  padding: 0.3rem 1rem;
+  text-shadow: 2px 1px 2px rgba(131, 131, 131, 0.884);
 }
 
 .avatar,
@@ -260,10 +264,10 @@ header figure {
   display: flex;
   width: 600%;
   height: 240%;
-  background-color: var(--color-terciary);
+  background-color: #efefef;
 }
 
-.hello button {
+.hello a.get-resume {
   background-color: transparent;
   padding: 0.9rem 0.5rem;
   border: 1px solid var(--color-terciary);
@@ -271,7 +275,6 @@ header figure {
   font-family: var(--font);
   font-size: 1rem;
   font-weight: bold;
-  cursor: pointer;
   width: 30%;
   min-width: 150px;
   color: var(--color-terciary);
@@ -280,12 +283,12 @@ header figure {
   align-self: center;
 }
 
-.hello button:hover {
+.hello a.get-resume:hover {
   background-color: rgba(247, 247, 247, 0.877);
   color: var(--color-primary);
 }
 
-.hello button:active {
+.hello a.get-resume:active {
   background-color: transparent;
   color: white;
 }
@@ -294,7 +297,7 @@ ul.social {
   display: flex;
   flex-direction: row;
   font-size: 1.8rem;
-  margin-bottom: 1rem;
+  margin: 0;
   list-style: none;
 }
 
@@ -487,7 +490,7 @@ li.tool-icon i.fa-figma {
   grid-template-columns: repeat(1, minmax(230px, 1fr));
   max-width: 97%;
   margin-top: 3rem;
-  gap: 4rem 2rem;
+  gap: 1rem 0;
 }
 
 .container-projects a:hover {
@@ -503,16 +506,16 @@ li.tool-icon i.fa-figma {
 .container-projects figure img {
   border-radius: 1rem;
   width: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .container-projects figure p {
   line-height: 1.2;
   font-size: 1rem;
   width: 50%;
-  text-align: left;
-  align-self: center;
   margin-left: 0.5rem;
   font-weight: 700;
+  text-align: left;
 }
 
 .modal {
@@ -602,7 +605,7 @@ article.portfolio-modal p {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 0 0.2rem;
+  margin: 0 0.2rem 4rem 0.2rem;
 }
 
 .form div {
@@ -668,7 +671,7 @@ article.portfolio-modal p {
   color: var(--color-primary);
   width: 50%;
   max-width: 150px;
-  padding: 0.6rem 0.1rem;
+  padding: 0.8rem 0.1rem;
   cursor: pointer;
 }
 
@@ -689,11 +692,20 @@ article.portfolio-modal p {
   animation: show-message 1s 1 normal 0s ease-out both;
 }
 
+/* -----   FOOTER   ------ */
+
+.main-footer-line {
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid #bbb;
+  width: 90%;
+  height: 0.2rem;
+}
+
 .social-footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 4rem;
   padding: 1rem;
   background-color: var(--color-terciary);
 }
@@ -704,4 +716,354 @@ section.social-footer .social {
 
 section.social-footer .social a i {
   padding: 0 1rem;
+}
+
+/* -----  DESKTOP VERSION (MediaQueries)   ------ */
+
+@media screen and (min-width: 601px) and (min-height: 415px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+  }
+
+  /* -----   HEAD LINE (DESKTOP)  ------ */
+
+  .menu-btn {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-primary);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  .navi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0.5rem 0;
+    width: 90%;
+  }
+
+  header a.logo:visited {
+    color: white;
+  }
+
+  header figure {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  header figure img {
+    display: flex;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  header figure figcaption {
+    align-self: center;
+    margin-left: 1rem;
+    font: 1.2rem var(--font);
+  }
+
+  .panel {
+    width: 70%;
+    max-width: 500px;
+    background-color: inherit;
+    position: static;
+    z-index: 1;
+    padding-top: 0;
+    transform: translate(0, 0);
+  }
+
+  .panel ul {
+    flex-direction: row;
+  }
+
+  .panel ul li {
+    width: 10%;
+  }
+
+  .panel ul li a {
+    padding: 0.7rem 0.9rem;
+  }
+
+  .panel ul li a:hover {
+    color: white;
+    font-weight: bold;
+    background-color: inherit;
+  }
+
+  .panel ul li a:active {
+    font-weight: 300;
+    background-color: inherit;
+  }
+
+  .panel ul li:last-child {
+    width: 30%;
+    max-width: 150px;
+  }
+
+  .panel ul li:last-child a {
+    background-color: var(--color-secundary);
+    border: 1px solid var(--color-primary);
+    border-radius: 30px;
+    font-weight: bold;
+    color: var(--color-primary);
+    padding: 0.6rem 0.1rem;
+  }
+
+  .panel ul li:last-child a:hover {
+    font-size: 1rem;
+    background-color: var(--color-terciary);
+  }
+
+  .panel ul li:last-child a:active {
+    background-color: var(--color-secundary);
+  }
+
+  .hello .hello-h1 {
+    display: flex;
+  }
+
+  .hello .name-h1 {
+    display: none;
+  }
+
+  .front-page {
+    justify-content: space-evenly;
+    background-image: url("./assets/lou.jpg");
+    min-height: 90vh;
+    padding-top: 3%;
+    overflow-x: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .meet {
+    flex-direction: row;
+    margin-top: 0;
+    justify-content: space-between;
+  }
+
+  .front-page ul.social {
+    display: flex;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .front-page .meet .hello {
+    order: 0;
+    max-width: 500px;
+  }
+
+  .hello h1 {
+    margin-bottom: 2rem;
+    color: black;
+    text-shadow: 1px 1px 30px #555;
+    line-height: 1.13;
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .hello p {
+    text-align: start;
+    color: var(--color-primary);
+    margin: 0 1rem 1.1rem 0;
+  }
+
+  .avatar {
+    order: 1;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    border-radius: 3rem;
+    width: 40%;
+    min-width: 200px;
+    max-width: 300px;
+    box-shadow: 1px 1px 10px #555;
+    min-height: 450px;
+    user-select: none;
+  }
+
+  .avatar img {
+    display: flex;
+    height: 80%;
+    width: 70%;
+    max-width: 150px;
+    background-color: inherit;
+  }
+
+  .hello a.get-resume {
+    padding: 0.9rem 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 0.4rem;
+    font-size: 1.1rem;
+    width: 40%;
+    min-width: 240px;
+    color: var(--color-primary);
+    outline: 1px solid rgb(111, 111, 124);
+    align-self: flex-start;
+  }
+
+  .hello a.get-resume:hover {
+    background-color: rgba(0, 38, 62, 0.6);
+    color: white;
+  }
+
+  .hello a.get-resume:active {
+    color: var(--color-primary);
+    background-color: transparent;
+  }
+
+  .hello-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: -9rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .hello-card-hello {
+    max-width: 350px;
+    justify-content: center;
+  }
+
+  .hello-card-hello h1,
+  .hello-card-hello p {
+    text-align: left;
+    padding: 0;
+  }
+
+  .hello-card-container .hello-card-avatar {
+    display: flex;
+  }
+
+  /* -----   FORM (DESKTOP)   ------ */
+
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form div {
+    width: 48%;
+  }
+
+  .form div:nth-child(3) {
+    width: 100%;
+    margin: 3rem 0;
+  }
+
+  .form textarea {
+    width: 95%;
+  }
+
+  .form-error {
+    position: absolute;
+    bottom: -2rem;
+    white-space: nowrap;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .hello-card {
+    height: 30vh;
+  }
+
+  /* -----   ABOUT ME (DESKTOP)   ------ */
+
+  .platforms .container-platforms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 1000px;
+    gap: 1rem;
+  }
+
+  .platforms .container-platforms li {
+    display: flex;
+    margin-left: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  /* -----   WORKS (DESKTOP)   ------ */
+
+  .container-projects {
+    grid-template-columns: repeat(3, minmax(150px, 200px));
+    width: 100%;
+    justify-content: center;
+    gap: 10%;
+  }
+
+  .container-projects figure {
+    flex-direction: column;
+  }
+
+  .container-projects figure img {
+    border-radius: 1rem;
+    width: 100%;
+  }
+
+  .container-projects figure p {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+
+  .portfolio-modal {
+    flex-direction: row;
+    max-width: 800px;
+  }
+
+  .portfolio-info {
+    margin-left: 1rem;
+    align-self: center;
+  }
+}
+
+/* -----   STYLES FOR Y-EXTRA-LARGES   ------ */
+
+@media screen and (min-height: 890px) {
+  :root {
+    background-color: var(--color-terciary);
+  }
+
+  html,
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  footer {
+    margin-top: 5%;
+  }
+
+  .form textarea {
+    height: 7rem;
+  }
+
+  section.social-footer .social a i {
+    font-size: 3rem;
+  }
 }
