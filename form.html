@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact me</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&family=Inter:wght@200;300;400;500;600&family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/86cc835e69.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="assets/bw.png">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="pages-body">
+     <header>
+        <div class="navi">
+            <a class="logo" href="#">
+                <figure>
+                    <img src="assets/bw.png" alt="sasukeR">
+                    <figcaption>sasukeR</figcaption>
+                </figure>
+            </a>
+            <nav class="panel">
+                <ul >
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about-me.html">About</a></li>
+                    <li><a href="/projects.html">Portfolio</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+     </header>
+     <button class="menu-btn" type="button">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-xmark none"></i>
+    </button>
+    <div class="hello-card"></div>
+    <div class="hello-card-container">
+        <div class="hello-card-avatar">
+            <img src="assets/avatar-nobg.png" alt="avatar">
+        </div>
+        <div class="hello-card-hello">
+            <h1>Reinaldo Contreras</h1>
+            <p>I’m a Full-Stack developer based in Lima, Peru</p>
+        </div>
+    </div>
+        <main class="main">
+            <section>
+                <h3>Contact Me</h3>
+                <div class="container-form">
+                    <form class="form">
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" placeholder="Write your name..." name="name" id="name" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="⚠ Name only acepts letters and white spaces" required>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" placeholder="Write your email..." name="email" id="email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" title="⚠ Wrong email" required>
+                        </div>
+                        <div>
+                            <label for="message">Message</label>
+                            <textarea cols="15" rows="5" placeholder="Write a message..." data-pattern="^.{1,255}$" title="⚠ Your comment must not exceed 255 characters" name="message" id="message" required></textarea>
+                        </div>
+                        <input type="submit" value="Submit" class="submit">
+                        <img class="none" src="assets/spinning-circles.svg" alt="Loading...">
+                        <p class="none">The message has been sent</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                    </form>
+                </div>
+            </section>
+        </main>
+        <div class="main-footer-line"></div>
+        <footer>
+            <section class="social-footer">
+                <ul class="social">
+                    <li><a href="https://twitter.com/reinaldojcg1" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/reinaldo-jesus-contreras-4394041a2/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/sazukeR/sazukeR" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+            </section>
+        </footer>
+    <script src="index.js" type="module"></script>
+    </body>
+</html>
