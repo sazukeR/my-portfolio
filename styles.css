@@ -671,7 +671,7 @@ article.portfolio-modal p {
   color: var(--color-primary);
   width: 50%;
   max-width: 150px;
-  padding: 0.8rem 0.1rem;
+  padding: 0.7rem 0.1rem;
   cursor: pointer;
 }
 
@@ -679,6 +679,7 @@ article.portfolio-modal p {
   color: white;
   background-color: var(--color-primary);
   border-color: var(--color-secundary);
+  transition: 0.3s all ease;
 }
 
 .form input[type="submit"]:active {
@@ -690,6 +691,18 @@ article.portfolio-modal p {
 .form-error.is-act {
   display: flex;
   animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 /* -----   FOOTER   ------ */
@@ -757,6 +770,14 @@ section.social-footer .social a i {
     width: 90%;
   }
 
+  header a.logo:active {
+    color: white;
+  }
+
+  header a.logo:link {
+    color: white;
+  }
+
   header a.logo:visited {
     color: white;
   }
@@ -813,6 +834,12 @@ section.social-footer .social a i {
     background-color: inherit;
   }
 
+  .panel a.link-act {
+    color: white;
+    font-weight: bold;
+    background-color: inherit;
+  }
+
   .panel ul li:last-child {
     width: 30%;
     max-width: 150px;
@@ -834,6 +861,22 @@ section.social-footer .social a i {
 
   .panel ul li:last-child a:active {
     background-color: var(--color-secundary);
+  }
+
+  .hello {
+    animation: show-avatar-l 1s 1 normal 0s ease-out both;
+  }
+
+  @keyframes show-avatar-l {
+    from {
+      opacity: 0;
+      transform: translateX(-25%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
   }
 
   .hello .hello-h1 {
@@ -899,6 +942,19 @@ section.social-footer .social a i {
     box-shadow: 1px 1px 10px #555;
     min-height: 450px;
     user-select: none;
+    animation: show-avatar-r 1s 1 normal 0s ease-out both;
+  }
+
+  @keyframes show-avatar-r {
+    from {
+      opacity: 0;
+      transform: translateX(25%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
   }
 
   .avatar img {
