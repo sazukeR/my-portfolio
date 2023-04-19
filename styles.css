@@ -505,7 +505,7 @@ li.tool-icon i.fa-figma {
 
 .container-projects figure img {
   border-radius: 1rem;
-  width: 50%;
+  width: 55%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -534,21 +534,6 @@ li.tool-icon i.fa-figma {
   transition: all 1s;
 }
 
-.modal-content {
-  position: relative;
-}
-
-.modal-close {
-  position: absolute;
-  top: -2.2rem;
-  right: 1rem;
-}
-
-div.modal-content a.modal-close i {
-  font-size: 2rem;
-  color: white;
-}
-
 .modal[id|="code"]:target {
   opacity: 1;
   pointer-events: auto;
@@ -559,14 +544,34 @@ div.modal-content a.modal-close i {
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
-  max-width: 90vw;
-  max-height: 90vh;
+  justify-content: space-around;
+  height: 80%;
+  width: 80%;
+  position: relative;
 }
 
-article.portfolio-modal img {
-  height: 50vh;
-  min-height: 300px;
-  max-height: 500px;
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+div.portfolio-modal a.modal-close i {
+  font-size: 3rem;
+  color: red;
+  background-color: white;
+  user-select: none;
+}
+
+.portfolio-modal .portfolio-img {
+  display: flex;
+  width: 100%;
+  height: 50%;
+}
+
+.portfolio-modal .portfolio-img img {
+  display: flex;
+  width: 100%;
 }
 
 article.portfolio-modal h4 {
@@ -1088,12 +1093,23 @@ section.social-footer .social a i {
 
   .portfolio-modal {
     flex-direction: row;
-    max-width: 800px;
+    max-height: 600px;
+  }
+
+  .portfolio-modal .portfolio-img {
+    height: 100%;
+    width: 50%;
   }
 
   .portfolio-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
     margin-left: 1rem;
     align-self: center;
+    overflow-y: scroll;
   }
 }
 
