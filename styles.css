@@ -697,6 +697,10 @@ article.portfolio-modal p {
   animation: show-message 1s 1 normal 0s ease-out both;
 }
 
+.contact-form-loader {
+  fill: #000;
+}
+
 @keyframes show-message {
   0% {
     visibility: hidden;
