@@ -45,6 +45,8 @@ export default function formValidation() {
         $loader.classList.add('none');
         $resp.classList.remove('none');
         $resp.innerHTML = json.message;
+        // localStorage
+        localStorage.setItem('USER', e.target.name.value);
         $form.reset();
       })
       .catch((err) => {
