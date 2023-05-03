@@ -150,7 +150,6 @@ header figure {
   outline: none;
   cursor: pointer;
   background-color: transparent;
-  color: white;
 }
 
 .menu-btn i.in-white {
@@ -696,6 +695,10 @@ article.portfolio-modal p {
 .form-error.is-act {
   display: flex;
   animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.contact-form-loader {
+  fill: #000;
 }
 
 @keyframes show-message {
