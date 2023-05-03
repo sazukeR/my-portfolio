@@ -8,9 +8,16 @@ export default function formValidation() {
     $span.classList.add('form-error', 'none');
     input.insertAdjacentElement('afterend', $span);
   });
+  document.addEventListener('DOMContentLoaded', () => {
+    $inputs.forEach((el) => {
+      el.value = localStorage.getItem(el.name);
+    });
+  });
   document.addEventListener('keyup', (e) => {
     if (e.target.matches('.form [required]')) {
       const $input = e.target;
+      // localStorage
+      localStorage.setItem($input.name, $input.value);
       const pattern = $input.pattern || $input.dataset.pattern;
       if (pattern && $input.value !== '') {
         const regex = new RegExp(pattern);
@@ -45,6 +52,9 @@ export default function formValidation() {
         $loader.classList.add('none');
         $resp.classList.remove('none');
         $resp.innerHTML = json.message;
+        localStorage.removeItem('name');
+        localStorage.removeItem('email');
+        localStorage.removeItem('message');
         $form.reset();
       })
       .catch((err) => {
