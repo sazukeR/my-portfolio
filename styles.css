@@ -609,7 +609,7 @@ article.portfolio-modal p {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 0 0.2rem 4rem 0.2rem;
+  margin: 0 0.2rem 0 0.2rem;
 }
 
 .form div {
@@ -697,8 +697,17 @@ article.portfolio-modal p {
   animation: show-message 1s 1 normal 0s ease-out both;
 }
 
-.contact-form-loader {
-  fill: #000;
+div.loader-container {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 2rem;
+  margin: 0;
+  height: 4rem;
+}
+
+.loader-container .contact-form-loader {
+  filter: brightness(0%) saturate(1000%) invert(45%) sepia(100%) saturate(2399%) hue-rotate(168deg) brightness(96%) contrast(98%);
 }
 
 @keyframes show-message {
@@ -1054,6 +1063,10 @@ section.social-footer .social a i {
 @media screen and (min-width: 601px) {
   .hello-card {
     height: 30vh;
+  }
+
+  .form div.loader-container {
+    width: 100%;
   }
 
   /* -----   ABOUT ME (DESKTOP)   ------ */
