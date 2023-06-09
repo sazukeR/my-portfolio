@@ -40,7 +40,7 @@ export default function formValidation() {
     const $loader = document.querySelector('.contact-form-loader');
     const $resp = document.querySelector('.contact-form-response');
     $loader.classList.remove('none');
-    fetch('https://formsubmit.co/ajax/reinaldojcg1@gmail.com', {
+    fetch('https://formsubmit.co/ajax/03a4e8ea0f986c2376c2076ea3a0b36d', {
       method: 'POST',
       body: new FormData(e.target),
     })
