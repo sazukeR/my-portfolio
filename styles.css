@@ -573,17 +573,6 @@ div.portfolio-modal a.modal-close i {
   width: 100%;
 }
 
-article.portfolio-modal h4 {
-  border-bottom: medium solid var(--color-primary);
-  padding: 0.5rem 0;
-  margin: 0.5rem 0;
-}
-
-article.portfolio-modal p {
-  font-size: 1rem;
-  line-height: 1.3;
-}
-
 .portfolio-details {
   display: grid;
   grid-template-columns: 40% 60%;
@@ -1153,5 +1142,16 @@ section.social-footer .social a i {
 
   section.social-footer .social a i {
     font-size: 3rem;
+  }
+}
+
+@media screen and (max-height: 730px) {
+  article .portfolio-modal h4 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  article .portfolio-modal p {
+    display: none;
   }
 }
