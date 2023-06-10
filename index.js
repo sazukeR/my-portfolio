@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   hamburguerMenu('.menu-btn', '.panel', '.front-page');
   showAndLessInfoAboutMe('.info-btn', '.more-info');
 
-  if (window.location.href.indexOf('index.html') > -1 || window.location.href.indexOf('projects.html') > -1) {
+  if (window.location.href.indexOf('index.html') > -1 || window.location.href.indexOf('projects.html') > -1 || window.location.href.indexOf('') > -1) {
     // ejecutar función específica para página1.html
     worksInsertions();
   }
