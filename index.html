@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Author: SazukeR,
+    Profession: Web Developer, Category: Portfolio, City: Lima,
+    Best Practices: True">
     <title>Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,9 +29,9 @@
 <body>
     <header>
         <div class="navi">
-            <a class="logo" href="#">
+            <a class="logo" href="#" aria-label="logo-home">
                 <figure>
-                    <img src="assets/bw.png" alt="sasukeR">
+                    <img src="assets/bw.webp" alt="sasukeR">
                     <figcaption>sasukeR</figcaption>
                 </figure>
             </a>
@@ -42,7 +45,7 @@
             </nav>
         </div>
     </header>
-    <button class="menu-btn" type="button">
+    <button class="menu-btn" type="button" aria-label="navigation">
         <i class="fa-solid fa-bars"></i>
         <i class="fa-solid fa-xmark none"></i>
     </button>
@@ -55,7 +58,7 @@
                 <a class="get-resume" href="https://drive.google.com/file/d/1CDpAffCha-EgSzISgGyUswT42SzPw4E6/view?usp=sharing" target="_blank" rel="noopener">Get my resume</a>
             </div>
             <div class="avatar">
-                <img src="assets/avatar-nobg.png" alt="avatar">
+                <img src="assets/avatar-nobg.webp" alt="avatar">
             </div>
         </div>
         <ul class="social container">
@@ -113,98 +116,42 @@
         <section class="projects">
             <h3>Projects</h3>
             <div class="container-projects">
-                <a href="#code-1">
-                    <figure>
-                        <img src="assets/code1.jpg" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur. Mi sit urna at rutrum. Duis aliquam eu adipiscing leo hendrerit. Et volutpat lectus turpis leo adipiscing purus pulvinar proin </p>
-                    </figure>
-                </a>
-                <a href="#code-2">
-                    <figure>
-                        <img src="assets/code2.jpg" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur. Mi sit urna at rutrum. Duis aliquam eu adipiscing leo hendrerit. Et volutpat lectus turpis leo adipiscing purus pulvinar proin </p>
-                    </figure>
-                </a>
-                <a href="#code-3">
-                    <figure>
-                        <img src="assets/code3.jpg" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur. Mi sit urna at rutrum. Duis aliquam eu adipiscing leo hendrerit. Et volutpat lectus turpis leo adipiscing purus pulvinar proin </p>
-                    </figure>
-                </a>
+                <template id="template-card">
+                    <a href="#code-1">
+                        <figure>
+                            <img>
+                            <p></p>
+                        </figure>
+                    </a>
+                </template>
             </div>
         </section>
-        <article class="modal" id="code-1">
-            <div class="modal-content">
-                <a href="#close" class="modal-close">
-                    <i class="fa-solid fa-circle-xmark"></i>
-                </a>
-                <article class="portfolio-modal">
-                    <img src="assets/code1.jpg" alt="code1">
+        <template id="template-modal">
+            <article class="modal">
+                <div class="portfolio-modal">
+                    <a href="#close" class="modal-close">
+                        <i class="fa-solid fa-square-xmark"></i>
+                    </a>
+                    <div class="portfolio-img">
+                        <img>
+                    </div>
                     <div class="portfolio-info">
-                        <h4>NOMBRE DEL PROYECTO 1</h4>
-                        <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam esse dicta sunt doloribus voluptas magni, culpa iste cum quo. Consequatur.</P>
+                        <h4></h4>
+                        <p></p>
                         <aside class="portfolio-details">
                             <small><b>CLIENTE</b></small>
-                            <small>nombre del cliente</small>
+                            <small></small>
                             <small><b>FECHA</b></small>
-                            <small>28-11-91</small>
+                            <small></small>
                             <small><b>TIPO</b></small>
-                            <small>tipo de proyecto</small>
+                            <small></small>
                             <small><b>ENLACE</b></small>
-                            <small><a href="https//proyecto.com" target="_blank" rel="noopener">http//fsdfdfsdfsdfsdf.com</a></small>
+                            <small></small>
                         </aside>
                     </div>
-                </article>
-            </div>
-        </article>
-        <article class="modal" id="code-2">
-            <div class="modal-content">
-                <a href="#close" class="modal-close">
-                    <i class="fa-solid fa-circle-xmark"></i>
-                </a>
-                <article class="portfolio-modal">
-                    <img src="assets/code2.jpg" alt="code2">
-                    <div class="portfolio-info">
-                        <h4>NOMBRE DEL PROYECTO 2</h4>
-                        <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam esse dicta sunt doloribus voluptas magni, culpa iste cum quo. Consequatur.</P>
-                        <aside class="portfolio-details">
-                            <small><b>CLIENTE</b></small>
-                            <small>nombre del cliente</small>
-                            <small><b>FECHA</b></small>
-                            <small>28-11-91</small>
-                            <small><b>TIPO</b></small>
-                            <small>tipo de proyecto</small>
-                            <small><b>ENLACE</b></small>
-                            <small><a href="https//proyecto.com" target="_blank" rel="noopener">http//fsdfdfsdfsdfsdf.com</a></small>
-                        </aside>
-                    </div>
-                </article>
-            </div>
-        </article>
-        <article class="modal" id="code-3">
-            <div class="modal-content">
-                <a href="#close" class="modal-close">
-                    <i class="fa-solid fa-circle-xmark"></i>
-                </a>
-                <article class="portfolio-modal">
-                    <img src="assets/code3.jpg" alt="code3">
-                    <div class="portfolio-info">
-                        <h4>NOMBRE DEL PROYECTO 3</h4>
-                        <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam esse dicta sunt doloribus voluptas magni, culpa iste cum quo. Consequatur.</P>
-                        <aside class="portfolio-details">
-                            <small><b>CLIENTE</b></small>
-                            <small>nombre del cliente</small>
-                            <small><b>FECHA</b></small>
-                            <small>28-11-91</small>
-                            <small><b>TIPO</b></small>
-                            <small>tipo de proyecto</small>
-                            <small><b>ENLACE</b></small>
-                            <small><a href="htt ps//proyecto.com" target="_blank" rel="noopener">http//fsdfdfsdfsdfsdf.com</a></small>
-                        </aside>
-                    </div>
-                </article>
-            </div>
-        </article>
+                </div>
+            </article>
+        </template>
         <section>
             <h3>Contact Me</h3>
             <div class="container-form">
@@ -222,8 +169,8 @@
                         <textarea cols="15" rows="5" placeholder="Write a message..." data-pattern="^.{1,255}$" title="⚠ Your comment must not exceed 255 characters" name="message" id="message" required></textarea>
                     </div>
                     <input type="submit" value="Submit" class="submit">
-                    <img class="none" src="assets/spinning-circles.svg" alt="Loading...">
-                    <p class="none">The message has been sent</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                    <img class="contact-form-loader none" src="assets/spinning-circles.svg" alt="Loading...">
+                    <p class="contact-form-response none">The message has been sent</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
                 </form>
             </div>
         </section>
@@ -238,5 +185,6 @@
             </ul>
         </section>
     </footer>
+<script src="index.js" type="module"></script>
 </body>
 </html>
