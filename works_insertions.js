@@ -7,33 +7,30 @@ export default function worksInsertions() {
   const worksContent = [
     {
       id: 'code-1',
-      title: 'work1',
-      description: 'reinaldo Lorem ipsum dolor sit amet consectetur. Mi sit urna at rutrum. Duis aliquam eu adipiscing leo hendrerit. Et volutpat lectus turpis leo adipiscing purus pulvinar proin',
-      img: './assets/code1.webp',
-      client_name: 'roberto',
-      work_date: '28-11-91',
-      kind_work: 'kind of project',
-      url_page: 'https://codepen.io/your-work/',
+      title: 'Weather API',
+      description: 'WeatherAPI, made in CodeSandbox with Open-meteo-api and Geolocation (JavaScript), it provides the current weather conditions and a forecast for the next 4 days.',
+      img: './assets/code1.jpg',
+      made_by: 'Reinaldo Contreras',
+      language: 'Vanilla JavaScript',
+      url_page: 'https://v44lfz.csb.app/',
     },
     {
       id: 'code-2',
-      title: 'work2',
-      description: 'reinaldo Lorem ipsum dolor sit amet consectetur. Mi sit urna at rutrum. Duis aliquam eu adipiscing leo hendrerit. Et volutpat lectus turpis leo adipiscing purus pulvinar proin',
-      img: './assets/code2.webp',
-      client_name: 'roberto',
-      work_date: '28-11-91',
-      kind_work: 'kind of project',
-      url_page: 'https://codepen.io/your-work/',
+      title: 'aFirebaseApp',
+      description: 'aFirebaseAPP Built in ReactJS, it provides user authentication, easy to configure, add notes, upload images with cludinary and many more things.',
+      img: './assets/code2.jpg',
+      made_by: 'Reinaldo Contreras',
+      language: 'React JS, Firebase, Cloudinary, MaterialUI',
+      url_page: 'https://github.com/sazukeR/aFirebaseApp',
     },
     {
       id: 'code-3',
-      title: 'work3',
-      description: 'reinaldo Lorem ipsum dolor sit amet consectetur. Mi sit urna at rutrum. Duis aliquam eu adipiscing leo hendrerit. Et volutpat lectus turpis leo adipiscing purus pulvinar proin',
-      img: './assets/code3.webp',
-      client_name: 'roberto',
-      work_date: '28-11-91',
-      kind_work: 'kind of project',
-      url_page: 'https://codepen.io/your-work/',
+      title: 'React-Heroes',
+      description: 'Superheroes Search App is a web application built with React. It allows users to explore and search for DC and Marvel superheroes, providing detailed information about each character.',
+      img: './assets/code3.jpg',
+      made_by: 'Reinaldo Contreras',
+      language: 'React JS',
+      url_page: 'https://github.com/sazukeR/react-heroes-app',
     },
   ];
   worksContent.forEach((el) => {
@@ -54,10 +51,9 @@ export default function worksInsertions() {
     $templateModal.querySelector('img').setAttribute('alt', el.img);
     $templateModal.querySelector('h4').textContent = el.title;
     $templateModal.querySelector('p').textContent = el.description;
-    $templateModal.querySelectorAll('small')[1].textContent = el.client_name;
-    $templateModal.querySelectorAll('small')[3].textContent = el.work_date;
-    $templateModal.querySelectorAll('small')[5].textContent = el.kind_work;
-    $templateModal.querySelectorAll('small')[7].innerHTML = `<a href='${el.url_page}' target='_blank' rel='noopener'>${el.url_page}/a>`;
+    $templateModal.querySelectorAll('small')[1].textContent = el.made_by;
+    $templateModal.querySelectorAll('small')[3].textContent = el.language;
+    $templateModal.querySelectorAll('small')[5].innerHTML = `<a href='${el.url_page}' target='_blank' rel='noopener'>${el.title}</a>`;
 
     const $cloneModal = document.importNode($templateModal, true);
     $fragmentModal.appendChild($cloneModal);
