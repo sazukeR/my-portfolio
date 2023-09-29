@@ -544,7 +544,7 @@ li.tool-icon i.fa-figma {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 70%;
+  height: 80%;
   width: 90%;
   position: relative;
 }
