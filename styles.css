@@ -545,7 +545,7 @@ li.tool-icon i.fa-figma {
   flex-direction: column;
   justify-content: space-around;
   height: 70%;
-  width: 70%;
+  width: 90%;
   position: relative;
 }
 
@@ -575,8 +575,17 @@ div.portfolio-modal a.modal-close i {
 
 .portfolio-details {
   display: grid;
-  grid-template-columns: 20% 80%;
-  grid-auto-rows: 2rem;
+  grid-template-columns: 25% 75%;
+  grid-auto-rows: 3rem;
+  align-items: center;
+}
+
+.portfolio-details small {
+  text-align: left;
+}
+
+.portfolio-details small.small-title {
+  text-align: left;
 }
 
 .portfolio-details b {
